@@ -1,0 +1,34 @@
+<div class="week_tasks">
+    <h2 class="task_title" *ngIf="weekTaskGroups.length > 0">Tasks</h2>
+    <div class="list_wrapper">
+        <div class="task_day" *ngFor="let day of weekTaskGroups">
+            <div class="header">
+                <div class="header_info">
+                    <p class="label">{{ day.label }}</p>
+                    <!-- <p class="date">{{ day.date }}</p> -->
+                </div>
+                <button class="open_task_page" (click)="routerNav.openDay(day.isoDate)">
+                    <svg width="19" height="19" viewBox="0 0 24 24">
+                        <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="task_list" [class.expanded]="day.expanded">
+                <div class="task_item" *ngFor="let task of (day.expanded ? day.tasks : day.tasks.slice(0,3))" (click)="routerNav.openTaskInfo(task.id)">
+                    <span class="dot" [ngClass]="task.priority"></span>
+                    <div class="task_name_time">
+                        <p class="task_name">{{ task.name }}</p>
+                        <p class="task_time">{{ task.time }}</p>
+                    </div>
+                    <svg width="19" height="19" viewBox="0 0 24 24">
+                        <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="more_tasks" *ngIf="day.tasks.length > 3" (click)="expandedDay(day)">{{ day.expanded ? 'show less' : '+' + (day.tasks.length - 3) + ' more' }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="no_week_tasks" *ngIf="weekTaskGroups.length === 0">
+        <p>No tasks in next 7 days</p>
+    </div>
+</div>

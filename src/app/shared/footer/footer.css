@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+footer {
+    @apply w-full fixed bottom-0 left-0 flex justify-around items-center text-white;
+    height: var(--footer_height);
+    background: var(--dark_green);
+}
+
+.active_link {
+    @apply font-bold;
+    color: var(--bg);
+}

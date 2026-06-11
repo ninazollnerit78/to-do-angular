@@ -1,0 +1,20 @@
+<div class="picker_box" #pickerBox *ngIf="show" >
+    <h3>Select Time</h3>
+    <div class="time_box grid">
+        <div class="hour_box col">
+            <p>Hours</p>
+            <div class="list">
+                <button *ngFor="let h of hours" (click)="selectHour(h)" [class.active]="selectedHour === h">{{ h }}</button>
+            </div>
+        </div>
+        <div class="minutes_box col">
+            <p>Minutes</p>
+            <div class="list">
+                <button *ngFor="let m of minutes" (click)="selectMinute(m)" [class.active]="selectedMinute === m">{{ m }}</button>
+            </div>
+        </div>
+    </div>
+    <div class="btn_box actions">
+        <button (click)="selectTime()">OK</button>
+    </div>
+</div>

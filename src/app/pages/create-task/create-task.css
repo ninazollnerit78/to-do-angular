@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+input {
+    @apply w-full border-b px-[10px] py-[5px] text-[15px] font-[500] text-gray-600 mt-[-5px];
+    border-color: var(--border-black);
+}
+
+input::placeholder, textarea::placeholder {
+    @apply  text-gray-600;
+}
+
+input:focus, textarea:focus {
+    @apply outline-none ring-0;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover,
+input:-webkit-autofill:focus, textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--bg) inset !important;
+    box-shadow: 0 0 0 1000px var(--bg) inset !important;
+    -webkit-text-fill-color: #4b5563 !important;
+}
+
+p {
+    @apply text-[15px];
+    color: var(--border-black);
+}
+
+.create_title {
+    @apply text-[18px] uppercase font-[500] text-center;
+    color: var(--dark_green);
+}
+
+.task_informations {
+    @apply flex flex-col gap-[15px];
+}
+
+.date_wrapper, .time_wrapper {
+    @apply relative;
+}
+
+.calendar_btn, .time_picker_btn {
+    @apply absolute right-[10px] text-gray-600;
+}
+
+.priority_btns {
+    @apply flex gap-[5px] mt-[5px];
+}
+
+.priority_btns button {
+    @apply text-[15px] font-[500] w-[33%] rounded-[5px] h-[30px];
+    color: #00000070;
+}
+
+.priority_btns button.active {
+    @apply text-black shadow-md -translate-y-0.5;
+}
+
+.priority_btns button.high {
+    background: #ef4444;
+}
+.priority_btns button.medium {
+    background: #f59e0b;
+}
+.priority_btns button.low {
+    background: #94a3b8;
+}
+
+.task_note textarea {
+    @apply w-full h-[100px] border text-[15px] font-[500] px-[10px] py-[5px] rounded-[10px] text-gray-600;
+    border-color: var(--border-black);
+}
+
+.create_task_btn {
+    @apply w-[150px] h-[35px] rounded-[5px] m-auto text-[15px] font-[500];
+    color: var(--bg);
+    background: var(--light_green);
+}

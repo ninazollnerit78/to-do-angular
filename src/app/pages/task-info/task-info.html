@@ -1,0 +1,31 @@
+<div class="task_info">
+    <div class="header">
+        <button class="back_btn" (click)="routerNav.openDay(task.date)">
+            <svg width="20" height="20" viewBox="0 0 24 24">
+                <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="3"/>
+            </svg>
+        </button>
+        <button class="edit_btn" (click)="routerNav.openEdit(task.id)">Edit</button>
+    </div>
+    <div class="task_card">
+        <div class="task_title">
+            <h2 class="tasn_name">{{ task.name }}</h2>
+            <p class="task_date">{{ formatToDisplay(task.date) }} • {{ task.time }}</p>
+        </div>
+        <div class="task_priority">
+            <p class="priority_name">Priority:</p>
+            <div>
+                <span class="dot" [ngClass]="task.priority"></span>
+                <p>{{ task.priority }}</p>
+            </div>
+        </div>
+        <div class="task_note" *ngIf="task.note">
+            <h4>Note:</h4>
+            <p>{{ task.note }}</p>
+        </div>
+    </div>
+    <div class="task_actions">
+        <button class="delete_btn" (click)="deleteTask(task.id);">Delete</button>
+        <button class="complete_btn">Mark as done</button>
+    </div>
+</div>

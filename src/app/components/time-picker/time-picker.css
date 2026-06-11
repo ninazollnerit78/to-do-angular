@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+.picker_box {
+  @apply absolute top-1 left-0 mt-[6px] p-[6px] rounded-[10px] w-[260px] z-10;
+  background: rgb(227, 228, 230);
+}
+
+.picker_box h3 {
+  @apply text-center text-[15px];
+}
+
+.time_box p {
+  @apply text-center;
+}
+
+.grid {
+  @apply flex gap-[10px];
+}
+
+.col {
+  @apply flex-1;
+}
+
+.list {
+  @apply max-h-[150px] overflow-y-auto flex flex-col;
+}
+
+.list button {
+  @apply border-none bg-transparent p-[6px] cursor-pointer rounded-[6px] transition duration-[0.2s];
+}
+
+.list button:hover {
+  background: #eee;
+}
+
+.list button.active {
+  @apply font-bold;
+  background: var(--light_green);
+}
+
+.actions {
+  @apply flex justify-between mt-[10px];
+}
+
+.btn_box button {
+  @apply m-auto w-[50px] h-[30px] font-[500] rounded-[5px];
+  background: var(--light_green);
+}

@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+.header {
+    @apply relative;
+    color: var(--dark_green);
+}
+
+.title {
+    @apply flex flex-col justify-center items-center;
+}
+
+.title_container {
+    @apply flex gap-[10px] items-center truncate;
+    width: calc(100% - 25px);
+}
+
+.day_label {
+    @apply text-[18px] font-[500];
+}
+
+.full_date {
+    color: var(--light_blue);
+}
+
+.task_name {
+    @apply truncate text-[15px];
+    width: calc(100% - 10px);
+}
+
+.task_time {
+    @apply text-[16px] font-[500];
+}
+
+.task_info_btn {
+    @apply flex ml-auto mt-[5px];
+}
+
+.task_note {
+    @apply truncate;
+}
+
+.add_task {
+    @apply absolute top-[10px] right-[10px] text-[20px] font-[500];
+}
+
+.daily_list {
+    @apply flex flex-col gap-[15px];
+}
+
+.task_item {
+    @apply rounded-[10px] p-[15px];
+    background: var(--light_green);
+    color: var(--white);
+}
+
+.task_title {
+    @apply flex items-center gap-[10px];
+}
+
+.dot {
+    @apply border w-[9px] h-[9px];
+    border-color: #ffffff9f;
+}

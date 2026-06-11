@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+.week_tasks {
+    @apply py-[20px];
+    font-family: Roboto, sans-serif;
+}
+
+.task_title {
+    @apply text-[18px] font-bold uppercase text-center;
+    color: var(--dark_green);
+}
+
+.header {
+    @apply flex justify-between items-center px-[10px];
+    color: var(--dark_green);
+}
+
+.header_info {
+    @apply flex items-end gap-[10px];
+}
+
+.header_info .label {
+    @apply text-[18px];
+}
+
+.header_info .date {
+    @apply text-[13px] pb-[4px];
+    color: var(--light_green);
+}
+
+.open_task_page {
+    /* @apply text-[17px] ; */
+}
+
+.no_week_tasks p {
+    @apply text-center;
+    color: var(--light_green);
+}
+
+.list_wrapper {
+    @apply flex flex-col gap-[10px];
+}
+
+.task_list {
+    @apply flex flex-col gap-[7px];
+}
+
+.task_item {
+    @apply flex items-center gap-[5px] h-[40px] rounded-[7px] px-[10px] overflow-hidden;
+    background: var(--light_green);
+    color: var(--white);
+}
+
+.task_name_time {
+    @apply w-full flex justify-between overflow-hidden;
+}
+
+.task_time {
+    @apply w-[40px] text-right font-[500];
+}
+
+/* truncate - ... za paragraf */
+.task_name {
+    @apply overflow-hidden truncate;
+    width: calc(100% - 45px);
+}
+
+.dot {
+    @apply w-[7px] h-[7px];
+}
+
+.more_tasks {
+    @apply text-center opacity-50;
+    color: var(--dark_green);
+}

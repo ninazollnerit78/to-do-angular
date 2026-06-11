@@ -1,3 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+:root{
+    /* colors */
+    --bg: #F6F5EC;
+    --white: #ffffff;
+    --border-main: #ffffff1f;
+    --border-black: #00000050;
+    --light_green: #BDCFAA;
+    --dark_green: #8E9E83;
+    /* heights */
+    --header_height: 50px;
+    --footer_height: 50px;
+}
+
+body {
+    @apply relative;
+    background: var(--bg);
+}
+
+body, footer, header {
+    font-family: Roboto, sans-serif;
+}
+
+.main_content {
+    @apply w-[90%] absolute py-[15px] left-1/2 -translate-x-1/2;
+    top: var(--header_height);
+    height: calc(100vh - var(--header_height) - var(--footer_height));
+}
+
+.dot {
+    @apply w-[5px] h-[5px] rounded-full block;
+}
+
+.dot.ghost {
+    @apply opacity-[30%];
+    background: var(--white);
+}
+
+.dot.high {
+    background: #ef4444;
+}
+.dot.medium {
+    background: #f59e0b;
+}
+.dot.low {
+    background: #94a3b8;
+}

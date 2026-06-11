@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+.task_info {
+    @apply flex flex-col gap-[10px];
+}
+
+.header {
+    @apply flex justify-between items-center;
+    color: var(--dark_green);
+}
+
+.edit_btn {
+    @apply w-[50px] h-[25px] rounded-[5px] font-[500];
+    color: var(--bg);
+    background: var(--light_green);
+}
+
+.task_card {
+    @apply flex flex-col gap-[10px];
+}
+
+.task_title {
+    @apply flex flex-col justify-center items-center;
+    color: var(--dark_green);
+}
+
+.tasn_name {
+    @apply text-[18px] font-[500];
+}
+
+.task_date {
+    @apply text-[16px];
+}
+
+.task_priority {
+    @apply flex gap-[10px] items-center;
+}
+
+.task_priority div {
+    @apply flex justify-center items-center gap-[5px];
+}
+
+.task_priority div p {
+    @apply capitalize;
+}
+
+.priority_name, .task_note h4 {
+    @apply uppercase;
+    color: var(--dark_green);
+}
+
+.task_priority, .task_note {
+    @apply text-[15px];
+}
+
+.task_actions {
+    @apply mt-[10px] flex justify-center items-center gap-[10px];
+}
+
+.task_actions button {
+    @apply text-white h-[40px] w-[110px] rounded-[5px];
+}
+
+.delete_btn {
+    background: #ef4444;
+}
+
+.complete_btn {
+    background: var(--light_green);
+}

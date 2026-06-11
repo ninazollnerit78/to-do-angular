@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+header {
+    @apply w-full fixed top-0 left-0;
+    height: var(--header_height);
+    background: var(--dark_green);
+}
+
+.header_logo {
+    @apply h-full flex justify-center items-center text-[20px] font-bold;
+    color: var(--bg);
+}
